@@ -6,9 +6,8 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
 </head>
 <body ng-app="mainApp">
-  <header ng-controller="HomeController">
-    {{title}}
-    <h1> Haute Dogue </h1>
+  <header ng-controller="HeaderController as header">
+    <h1> {{header.title}} </h1>
     <nav>
       <a href=""> Home </a>
       <a href=""> Outfits </a>
@@ -19,7 +18,7 @@
   </header>
 
   <div>
-    dog 1 hero image
+    <img
   </div>
 
   <div>
@@ -55,4 +54,5 @@
 <script src="app/app.module.js"></script>
 <!-- Components -->
 <script src="app/components/home/homeController.js"></script>
+<script src="app/shared/headerNav/headerDirective.js"></script></script>
 </html>
