@@ -1,0 +1,25 @@
+{
+  "name": "hautedaug",
+  "version": "1.0.0",
+  "description": "package file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimkvn/hautedaug.git"
+  },
+  "author": "kevin kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimkvn/hautedaug/issues"
+  },
+  "homepage": "https://github.com/kimkvn/hautedaug#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-ruby-sass": "^2.1.0",
+    "gulp-sass": "^2.3.2"
+  }
+}
