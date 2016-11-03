@@ -1,26 +1,33 @@
 var gulp = require('gulp');
-//var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
+var browserSync = require('browser-sync').create();
 
 
-// gulp.task('browser-sync', function(){
-//   browserSync.init({
-//     server: {
-//       baseDir: "./"
-//     }
-//   });
-// });
+gulp.task('browserSync', function(){
+  browserSync.init({
+    server: {
+      baseDir: "./"
+    }
+  });
+});
 
-// gulp.task('watch', ['browser-sync'], function(){
-//   gulp.watch('*.html').on('change', browserSync.reload);
-// });
 
 gulp.task('sass', function(){
   return gulp.src('sass/styles.scss')
     .pipe(sass()) //using gulp sass
     .pipe(gulp.dest('styles'))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
 });
 
-gulp.task('hello', function(){
-  console.log('SUP FUCKERS');
+gulp.task('watch', ['browserSync', 'sass'], function(){
+  gulp.watch('sass/*.scss', ['sass']);
+  gulp.watch('*.html', browserSync.reload);
+  // repeat above line for other watchers!
 });
+
+
+// gulp.task('hello', function(){
+//   console.log('SUP FUCKERS');
+// });
