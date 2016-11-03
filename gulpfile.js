@@ -27,7 +27,4 @@ gulp.task('watch', ['browserSync', 'sass'], function(){
   // repeat above line for other watchers!
 });
 
-
-// gulp.task('hello', function(){
-//   console.log('SUP FUCKERS');
-// });
+gulp.task('default', ['browserSync', 'sass', 'watch' ]);
