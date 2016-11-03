@@ -5,8 +5,9 @@
   <link rel="stylesheet" href="styles/styles.css" />
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
 </head>
-<body>
-  <header>
+<body ng-app="mainApp">
+  <header ng-controller="HomeController">
+    {{title}}
     <h1> Haute Dogue </h1>
     <nav>
       <a href=""> Home </a>
@@ -48,4 +49,10 @@
 
   </footer>
 </body>
+<!-- Angular -->
+<script src="bower_components/angular/angular.min.js"></script>
+<!-- Modules -->
+<script src="app/app.module.js"></script>
+<!-- Components -->
+<script src="app/components/home/homeController.js"></script>
 </html>
